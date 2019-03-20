@@ -1,9 +1,13 @@
-const main = () => {
-  const [, , ...args] = process.argv
-  if (args[0]) {
-    console.log("Ciao!")
-  }
-  console.log(process.argv)
-}
+const search = require("./search");
 
-module.exports = main
+const main = () => {
+  const [, , ...args] = process.argv;
+  console.log(args);
+  if (args[0]) {
+    // console.log("Ciao!");
+    search(args[0]);
+  }
+  //  console.log(process.argv);
+};
+main();
+module.exports = main;
